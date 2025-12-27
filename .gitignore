@@ -1,0 +1,12 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+
+# Model weights
+gnn_tox21.pth
+
+# Data directory
+data/
