@@ -1,3 +1,6 @@
+![alt text](image.png)
+
+
 # 🧪 Molecule Toxicity Prediction with Graph Neural Networks
 
 A **self‑contained** Python project that trains a Graph Convolutional Network (GCN) on the **Tox21** molecular toxicity dataset (via the `MoleculeNet` collection) and serves an interactive web UI with **Streamlit** to explore predictions and per‑atom importance (XAI).
