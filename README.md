@@ -20,18 +20,13 @@ A **self‑contained** Python project that trains a Graph Convolutional Network 
 
 ```
 gnn/
-│
-├─ .venv/                # Virtual environment 
-├─ __pycache__/          # Compiled Python files
-│
 ├─ app.py                # Streamlit UI – loads the saved model & visualises molecules
 ├─ data.py               # Loads the MoleculeNet Tox21 dataset, splits train/test, creates DataLoaders
 ├─ model.py              # Core GCN definition (flexible `in_channels` argument)
 ├─ train.py              # Training loop, saves `gnn_tox21.pth`
 ├─ visualise.py          # Converts a `torch_geometric` graph to a NetworkX plot with RDKit atom labels
-├─ xai.py                # Simple gradient‑based node importance (per‑atom attribution)
-├─ data/                 # Will contain the downloaded MoleculeNet files after first run
-└─ gnn_tox21.pth         # Saved checkpoint (generated after training)
+├─ xai.py                # Simple gradient‑based node importance (per‑atom attribution) 
+├─ requirements.txt      # List of dependencies
 ```
 
 ---
@@ -49,16 +44,8 @@ python -m venv .venv
 
 3. **Install the dependencies**
 
-   Follow the instructions in `req.txt`. The most reliable way on Windows is:
-
 ```powershell
-pip install torch==2.4.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-pip install torch_scatter -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
-pip install torch_sparse -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
-pip install torch_cluster -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
-pip install torch_spline_conv -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
-pip install torch_geometric
-pip install -r req.txt
+pip install -r requirements.txt
 ```
 
 > **Note:** If you have a CUDA‑enabled GPU, replace the `cpu` suffix with the appropriate CUDA version (e.g., `+cu121`).
@@ -145,15 +132,4 @@ All interactions happen locally; no external API keys are required.
 
 ---
 
-## 🎉 Quick Start Recap
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r req.txt
-
-python train.py
-streamlit run app.py
-```
-
-Enjoy experimenting with graph neural networks for molecular toxicity! 🚀
