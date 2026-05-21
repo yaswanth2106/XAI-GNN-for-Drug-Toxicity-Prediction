@@ -62,5 +62,5 @@ torch.save({
 }, "gnn_tox21.pth")
 
 
-print("✅ Model saved")
+print(" Model saved")
 

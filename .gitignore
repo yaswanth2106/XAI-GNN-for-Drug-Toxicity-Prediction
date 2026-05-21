@@ -10,3 +10,6 @@ gnn_tox21.pth
 
 # Data directory
 data/
+packages.txt
+Dockerfile
+.gitignore
